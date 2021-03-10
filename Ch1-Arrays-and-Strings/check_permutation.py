@@ -22,6 +22,6 @@ def check_permutation(str1, str2):
   
   return True
 
-print(check_permutation("asdfghjkl", "lkjhgfdsa"))
-print(check_permutation("volleyball", "lbavloeyll"))
-print(check_permutation("not", "correct"))
+print(check_permutation("asdfghjkl", "lkjhgfdsa"))    # True
+print(check_permutation("volleyball", "lbavloeyll"))  # True
+print(check_permutation("not", "correct"))            # False
