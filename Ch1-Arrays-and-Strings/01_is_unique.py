@@ -23,10 +23,10 @@ def is_unique(str):
   
   return True
 
-print(is_unique_with_dict("aassddfgg"))
-print(is_unique_with_dict("asdfghjkl"))
-print(is_unique_with_dict("thelazyfox"))
+print(is_unique_with_dict("aassddfgg"))   # False
+print(is_unique_with_dict("asdfghjkl"))   # True
+print(is_unique_with_dict("thelazyfox"))  # True
 
-print(is_unique("aassddfgg"))
-print(is_unique("asdfghjkl"))
-print(is_unique("thelazyfox"))
+print(is_unique("aassddfgg"))             # False
+print(is_unique("asdfghjkl"))             # True
+print(is_unique("thelazyfox"))            # True
