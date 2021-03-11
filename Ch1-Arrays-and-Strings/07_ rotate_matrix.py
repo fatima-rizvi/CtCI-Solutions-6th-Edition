@@ -1,3 +1,6 @@
+# Given an image represented by an N x N matrix, where each pixel in the image is represented by an integer, write a method to rotate the image by 90 degrees.
+# Try to do this in place
+
 def rotate_matrix(m):
   for row in m:
     print(row)
