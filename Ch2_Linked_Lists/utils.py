@@ -45,3 +45,12 @@ class LinkedList:
         self.tail = cursor   
         self.tail.next = None   
         return data
+    
+    def print_list(self):
+      cursor = self.head
+      res = []
+      while cursor:
+        res.append(cursor.value)
+        cursor = cursor.next
+      
+      print(res)
