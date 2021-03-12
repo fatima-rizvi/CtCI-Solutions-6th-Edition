@@ -20,7 +20,6 @@ def find_kth_to_last(ll, k):
   list_length = 0
 
   while cursor:
-    # ll_list.append(cursor.val)
     list_length += 1
     cursor = cursor.next
 
