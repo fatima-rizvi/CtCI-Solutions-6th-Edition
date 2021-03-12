@@ -14,13 +14,13 @@ linked_list.add_to_tail(1)
 linked_list.add_to_tail(2)
 linked_list.add_to_tail(9)
 
-def view_linked_list(ll):
-  res = []
-  cursor = ll.head
-  while cursor is not None:
-    res.append(cursor.value)
-    cursor = cursor.next
-  return res
+# def view_linked_list(ll):
+#   res = []
+#   cursor = ll.head
+#   while cursor is not None:
+#     res.append(cursor.value)
+#     cursor = cursor.next
+#   return res
 
 def remove_dups(ll):
   cursor = ll.head
@@ -34,9 +34,8 @@ def remove_dups(ll):
       tracker[cursor.next.value] = 0
     cursor = cursor.next
 
-  print(view_linked_list(ll))
-
   return ll.head
 
 remove_dups(linked_list)
+linked_list.print_list() # Check linked list
 
