@@ -31,36 +31,26 @@ list_4.add_to_tail(7)
 list_4.add_to_tail(8)
 
 def sum_lists(ll1, ll2):
-  len_1 = 0
-  len_2 = 0
   res = LinkedList()
 
   cursor1 = ll1.head
   cursor2 = ll2.head
-  while cursor1 or cursor2:
-    if cursor1:
-      len_1 +=1
-      cursor1 = cursor1.next
-    if cursor2:
-      len_2 += 1
-      cursor2 = cursor2.next
-
-  if len_1 >= len_2:
-    longer = ll1
-    shorter = ll2
-  else:
-    longer = ll2
-    shorter = ll1
-
-  cursor1 = longer.head
-  cursor2 = shorter.head
 
   carry = False
-  while cursor2:
+  while cursor1 or cursor2:
+    val_sum = 0
+
     if cursor1:
-      val_sum = cursor1.value + cursor2.value
-      if carry:
-        val_sum += 1
+      val_sum += cursor1.value
+      cursor1 = cursor1.next
+      
+    if cursor2:
+      val_sum += cursor2.value
+      cursor2 = cursor2.next
+
+    if carry:
+      val_sum += 1
+
     if val_sum > 9:
       carry = True
       val_sum -= 10
@@ -68,20 +58,6 @@ def sum_lists(ll1, ll2):
       carry = False
   
     res.add_to_tail(val_sum)
-    cursor1 = cursor1.next
-    cursor2 = cursor2.next
-
-  while cursor1:
-    val_sum = cursor1.value
-    if carry:
-      val_sum += 1
-    if val_sum > 9:
-      carry = True
-      val_sum -= 10
-    else:
-      carry = False
-    res.add_to_tail(val_sum)
-    cursor1 = cursor1.next
 
   res.print_list()
   return res
